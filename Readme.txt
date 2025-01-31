@@ -48,28 +48,27 @@ $ python tests/test_api.py
 
 If the setup is correct, you should see:
 
- API 测试通过！
 
 
 ---
 
-## 📡 API Endpoints
+API Endpoints
 
-### **`POST /generate_reply/`** - Get AI-generated Twitter-style reply
-#### **Request Body:**
-```json
+`POST /generate_reply/`** - Get AI-generated Twitter-style reply
+Request Body:
+
 {
   "text": "What do you think about AI?"
 }
-```
+
 Response:
-json
+
 {
   "reply": "AI is like a genie that grants wishes, but instead of granting your wish, it just makes your life worse."
 }
 
 
-Open the interactive API docs at [`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs) for testing!
+Open the interactive API docs at [`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs) 
 
 
-
+All local tests pass. The CI/CD may fail due to environmental problems and needs to be repaired later
