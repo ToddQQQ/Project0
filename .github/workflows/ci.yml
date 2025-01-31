@@ -22,8 +22,9 @@ jobs:
 
       - name: Start API Server in background
         run: |
-          uvicorn app:app --host 127.0.0.1 --port 8000 --reload &
+          nohup uvicorn app:app --host 127.0.0.1 --port 8000 --reload > uvicorn.log 2>&1 &
           sleep 5  # 等待服务器完全启动
+          curl --retry 5 --retry-connrefused --retry-delay 2 -sSf http://127.0.0.1:8000/docs || cat uvicorn.log
 
       - name: Run tests
         run: pytest tests/
