@@ -7,22 +7,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.12"
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
 
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Start API Server
-      run: |
-        uvicorn app:app --host 127.0.0.1 --port 8000 --reload &
-        sleep 5  # 等待 5 秒，确保服务器启动
+      - name: Start API Server in background
+        run: |
+          uvicorn app:app --host 127.0.0.1 --port 8000 --reload &
+          sleep 5  # 等待服务器完全启动
 
-    - name: Run tests
-      run: pytest tests/
+      - name: Run tests
+        run: pytest tests/
