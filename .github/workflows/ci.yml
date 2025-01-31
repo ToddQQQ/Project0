@@ -1,43 +1,24 @@
-name: CI Pipeline
+name: Run API Tests
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]  # trigger
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # environment
 
     steps:
-      - name:  Checkout Repository
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name:  Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: "3.10"  # python version
 
-      - name:  Install Dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name:  Run Tests
-        run: |
-          pytest tests/
-
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-
-    steps:
-      - name:  Checkout Repository
-        uses: actions/checkout@v4
-
-      - name:  Deploy to Server (Placeholder)
-        run: echo "Deploying API..."
+      - name: Run API tests
+        run: python tests/test_api.py  # run tests
