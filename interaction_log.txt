@@ -1,0 +1,106 @@
+You: how are you
+Bot: Here's something interesting I found: family name
+
+You: what is going on?
+Bot: Here's something interesting I found: Meta Platforms-owned mobile instant messenger and social media service
+
+You: How is the weather today?
+Bot: Here's something interesting I found: family name
+
+You: I love programming!
+Bot: Here's something interesting I found: country in South Asia
+
+You: how are you?
+Keywords: 
+Bot: You're absolutely right! Love it. 🌟
+
+You: How is the weather today?
+Keywords: weather, today
+Bot: I see you're talking about weather. Maybe you're interested in: sunny, rainy.
+
+You: I love programming
+Keywords: love, programming
+Bot: Here's something interesting I found: strong, positive emotion based on affection
+
+You: I love programming!
+Keywords: love, programming
+Bot: Here's something interesting I found: strong, positive emotion based on affection
+
+You: will Trump make America great again?
+Keywords: trump, america, great
+Bot: Here's something interesting I found: 47th president-elect and 45th president of the United States
+
+You: How's the weather today?
+Keywords: weather, today
+Bot: I see you're talking about weather. Maybe you're interested in: sunny, rainy.
+
+You: will Trump make America great again?
+Keywords: trump, america, great
+Bot: Here's something interesting I found: family name
+
+You: I love AI and technology!
+Keywords: love, ai, technology
+Bot: I see you're talking about technology. Maybe you're interested in: AI, blockchain.
+
+You: How's the weather today?
+Keywords: weather, today
+Bot: Yeah, totally! sunny, rainy.. Cool, huh? 😎
+
+You: Will blockchain change the world?
+Keywords: blockchain, change, world
+Bot: Not sure if you know this, but change in consensus rules of a blockchain; if contentious, can result in multiple permanent alternative chains. Pretty neat, right? 🤔
+
+You: will Trump make America great again?
+Keywords: trump, america, great
+Bot: Not sure if you know this, but musical instrument. Pretty neat, right? 🤔
+
+You: How's the weather today?
+Keywords: weather, today
+Bot: Yeah, totally! sunny, rainy.. Cool, huh? 😎
+
+You: What do you think about pizza?
+Keywords: think, pizza
+Bot: Not sure if you know this, but song by aretha franklin. Pretty neat, right? 🤔
+
+You: will Trump make America great again?
+Keywords: trump, america, great
+Bot: Not sure if you know this, but 47th president-elect and 45th president of the united states. Pretty neat, right? 🤔
+
+You: Tell me about blockchain and its future.
+Keywords: tell, blockchain, future
+Bot: Not sure if you know this, but family name. Pretty neat, right? 🤔
+
+You: How do you feel about pizza?
+Keywords: feel, pizza
+Bot: Not sure if you know this, but polish band. Pretty neat, right? 🤔
+
+You: how are you
+Bot: Absolutely! 🌟
+
+You: will trump win the competation?
+Bot: Absolutely! 🌟
+
+You: can you say something?
+Bot: That's amazing! 😊
+
+You: i hate you
+Bot: Hang in there! 💪
+
+You: oh no
+Bot: I get you. 🤗
+
+You: you are not that good
+Bot: Absolutely! 🌟
+
+You: how are you?
+Bot: Let me think... What’s your take?
+
+You: how do you think about trump?
+Bot: Let me think... What’s your take?
+
+You: how is the weather?
+Bot: Hmm, that's a good question! What do you think? 🤔
+
+You: dont ask me 
+Bot: Let me think... What’s your take?
+
