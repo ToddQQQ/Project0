@@ -73,10 +73,3 @@ Open the interactive API docs at [`http://127.0.0.1:8000/docs`](http://127.0.0.1
 
 
 
- Future Enhancements
-Optimize GPT4All prompt engineering for better Twitter-style responses.
-Refactor the FastAPI service into a Java Spring Boot API for scalability.
-Integrate a database-backed knowledge graph to improve contextual responses.
-Deploy using CI/CD pipeline with Docker & GitHub Actions.
-
-
