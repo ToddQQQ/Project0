@@ -1,6 +1,6 @@
 name: CI/CD Pipeline
 
-on: push  # 触发方式，可以改成 pull_request
+on: push
 
 jobs:
   test:
@@ -10,9 +10,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check Uvicorn Path
-        run: which uvicorn || python -m uvicorn --version
-        
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -23,23 +20,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Start API Server in background
+      - name: Start API Server in Background
         run: |
-          uvicorn app:app --host 0.0.0.0 --port 8000 --reload &
-          echo "Waiting for API to start..."
-          sleep 10  # 让 API 有足够时间启动
+          python -m uvicorn app:app --host 127.0.0.1 --port 8000 --reload &
+          sleep 5  # 等待 API 启动
 
       - name: Check if API is running
         run: |
-          curl --retry 5 --retry-delay 3 --retry-connrefused -sSf http://127.0.0.1:8000/docs || (echo "API did not start" && exit 1)
+          curl -f http://127.0.0.1:8000/docs || (echo "Server failed to start" && exit 1)
 
       - name: Run tests
         run: pytest tests/
-
-      - name: Debug - Show Running Processes (if tests fail)
-        if: failure()
-        run: ps aux
-
-      - name: Debug - Show Network Usage (if tests fail)
-        if: failure()
-        run: netstat -tulnp
